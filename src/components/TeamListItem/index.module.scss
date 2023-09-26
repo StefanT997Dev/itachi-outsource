@@ -1,0 +1,58 @@
+@import "@/scss/common_styles";
+
+.team_list_item {
+  width: 100%;
+  height: 20em;
+  border-radius: 0.2em;
+  border: 2px solid $color-gray-eb;
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include above-mobile() {
+    width: 9em;
+    height: 9em;
+  }
+
+  &__image {
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5em;
+
+    @include above-mobile() {
+      width: 3em;
+      height: 3em;
+      margin-bottom: 0.6em;
+    }
+  }
+
+  &__name {
+    font-family: "DMSans-Medium";
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 0.8em;
+    text-align: center;
+    color: #1e0e62;
+
+    @include above-mobile() {
+      font-size: 0.55rem;
+    }
+  }
+
+  &__description {
+    font-family: "DMSans-Regular";
+    font-size: 0.8em;
+    color: $color-gray-8a;
+    margin-bottom: 1.25em;
+    text-align: center;
+
+    @include above-mobile() {
+      font-size: 0.4em;
+    }
+  }
+}

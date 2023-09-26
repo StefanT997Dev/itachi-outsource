@@ -1,0 +1,18 @@
+@import "@/scss/colors";
+@import "@/scss/breakpoints";
+
+.mentor_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include above-mobile(){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 2em;
+        width: 70%;
+        align-items: start;
+        margin-top: 1em;
+    }
+}

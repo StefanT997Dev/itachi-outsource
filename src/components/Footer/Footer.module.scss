@@ -1,0 +1,53 @@
+@import "@/scss/breakpoints";
+@import "@/scss/colors";
+
+.footer {
+    background-color: $color-blue;
+    border-radius: 4em 4em 0em 0em;
+    padding: 7em 2.4rem 7em 2.4rem;
+    margin-top: 25em;
+    display: flex;
+    flex-direction: row;
+    gap: 4.5rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include above-mobile() {
+        display: none;
+    }
+
+    &__main_column {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        color: #FFFFFF;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        min-width: 35vw;
+
+        @include above-mobile(){
+            width: 70%;
+            font-size: 1.2rem;
+            line-height: 1rem;
+        }
+        
+        &__title {
+            font-weight: 800;
+        }
+
+        &__sub_column {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-weight: 300;
+
+            &__link {
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                    text-decoration-color: #FFFFFF;
+                }
+            }
+        }
+    }
+}

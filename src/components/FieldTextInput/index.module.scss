@@ -1,0 +1,60 @@
+@import "../../scss/breakpoints";
+@import "../../scss/common_styles";
+
+.text_input {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  @include above-mobile() {
+    font-size: $cta-desktop-font-size;
+  }
+
+  &__label {
+    text-align: left;
+    font-size: $mobile-text-size;
+    letter-spacing: 0.04em;
+    color: $color-light-blue;
+    margin-bottom: 0.5em;
+
+    @include above-mobile() {
+      font-size: $cta-desktop-font-size;
+    }
+  }
+
+  &__input {
+    height: 5rem;
+    padding: 1rem 2rem;
+    color: $color-white;
+    font-size: $mobile-text-size;
+    letter-spacing: 0.04em;
+    background: #1a1d36;
+    font-family: "DMSans-Regular";
+    border: none;
+    box-shadow: 0rem 1.8rem 4rem -1.2rem rgba(0, 0, 0, 0.25);
+
+    @include above-mobile() {
+      font-size: $cta-desktop-font-size;
+      padding: 0.6rem 0.8rem;
+      height: auto;
+      // width: 34%;
+    }
+
+    &::placeholder {
+      color: #ffffff;
+
+      @include above-mobile() {
+        font-size: $cta-desktop-font-size;
+      }
+    }
+
+    &__error {
+      border: 1px solid red;
+    }
+  }
+
+  &__error {
+    color: red;
+    font-weight: 500;
+  }
+}

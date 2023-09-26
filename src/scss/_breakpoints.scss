@@ -1,0 +1,13 @@
+$responsive-xs: 742px;
+
+@mixin above-mobile() {
+    @media (min-width: $responsive-xs) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media (max-width: $responsive-xs) {
+        @content;
+    }
+}

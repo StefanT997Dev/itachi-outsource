@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 10px
+  scroll-behavior: smooth;
+
+  @media (min-width: 366px) {
+    font-size: 71.48%
+  }
+
+  @media (min-width: 418px) {
+    font-size: 81.64%;
+  }
+
+  @media (min-width: 478px) {
+    font-size: 93.36%;
+  }
+
+  @media (min-width: 546px) {
+    font-size: 106.64%;
+  }
+
+  @media (min-width: 624px) {
+    font-size: 121.87%;
+  }
+
+  @media (min-width: 713px) {
+    font-size: 139.25%;
+  }
+
+  @media(min-width: 1066px){
+    font-size: 150%;
+  }
+
+  @media(min-width: 1175px){
+    font-size: 160%;
+  }
+
+  @media(min-width: 1329px){
+    font-size: 180%;
+  }
+
+  @media(min-width: 1433px){
+    font-size: 200%;
+  }
+
+  @media(min-width: 1634px){
+    font-size: 220%;
+  }
+
+  @media(min-width: 1800px){
+    font-size: 240%;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+h1{
+  font-size: inherit;
+}
+
+h1, ul{
+  margin: 0;
+}
+
+h2{
+  font-size: inherit;
+  margin: 0;
+}
+
+iframe{
+  width: inherit;
+  height: inherit;
+}
+
+ul{
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  text-indent: -0.6em; 
+  padding-left: 0.6em; 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} 
+
+@font-face {
+  font-family: 'DMSans-Regular';
+  src: url('../pages/DMSans-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'DMSans-Medium';
+  src: url('../pages/DMSans-Medium.ttf');
+}

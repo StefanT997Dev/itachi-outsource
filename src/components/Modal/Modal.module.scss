@@ -1,0 +1,13 @@
+.root {
+  background-color: #00000080;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  padding: 1rem;
+}

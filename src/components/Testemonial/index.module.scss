@@ -1,0 +1,53 @@
+@import "@/scss/common_styles";
+
+.testemonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &__image {
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.7em;
+
+    @include above-mobile() {
+      width: 5em;
+      height: 5em;
+      margin-bottom: 1.5em;
+    }
+  }
+
+  &__title {
+    font-family: 'DMSans-Medium';
+    color: $color-primary;
+    font-weight: 700;
+    font-size: 1.2em;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+
+    @include above-mobile() {
+      max-width: 20em;
+      font-size: 0.6em;
+      margin-bottom: 2em;
+    }
+  }
+
+  &__description {
+    font-family: 'DMSans-Regular';
+    color: $color-dark-gray;
+    font-weight: 300;
+    font-size: 1.2em;
+    max-width: 100%;
+    text-align: center;
+
+    @include above-mobile() {
+      font-size: 0.6em;
+      max-width: 30em;
+    }
+  }
+}

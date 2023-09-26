@@ -1,0 +1,551 @@
+@import "@/scss/common_styles";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  position: relative;
+
+  &__header {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-start;
+    color: $color-title;
+    gap: 2em;
+
+    @include above-mobile() {
+      position: relative;
+      width: 85%;
+      height: 100vh;
+      gap: 0.85em;
+    }
+
+    &__logo {
+      position: absolute;
+      top: 3.7rem;
+      left: 6%;
+      font-size: 2.6rem;
+
+      @include above-mobile() {
+        top: 1rem;
+        font-size: 1rem;
+        left: 0%;
+      }
+    }
+
+    &__title {
+      margin-top: 3.5em;
+      font-size: 3rem;
+
+      @include above-mobile() {
+        margin-top: 6em;
+        font-size: 1.4rem;
+      }
+    }
+
+    &__description {
+      font-size: $h2-mobile-size;
+      line-height: 1.4em;
+      padding-right: 1.3em;
+      letter-spacing: 0.015em;
+
+      @include above-mobile() {
+        font-size: $desktop-text-size;
+      }
+    }
+
+    &__cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-clients-cta;
+      margin-top: 0.6em;
+      color: $color-white;
+      border-radius: 0.8rem;
+      border: none;
+      filter: drop-shadow(
+          0px 2.767256498336792px 2.2138051986694336px rgba(0, 0, 0, 0.04)
+        )
+        drop-shadow(
+          0px 6.650102138519287px 5.32008171081543px rgba(0, 0, 0, 0.03)
+        )
+        drop-shadow(
+          0px 12.521552085876465px 10.017241477966309px rgba(0, 0, 0, 0.04)
+        )
+        drop-shadow(
+          0px 22.3363094329834px 17.869047164916992px rgba(0, 0, 0, 0.04)
+        )
+        drop-shadow(
+          0px 41.777610778808594px 33.422088623046875px rgba(0, 0, 0, 0.05)
+        )
+        drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.3));
+      padding: 1.2rem 2.8rem;
+      text-align: center;
+      font-size: $mobile-text-size;
+
+      @include above-mobile() {
+        margin-top: 1.3em;
+        border-radius: 0.3rem;
+        padding: 0.4rem 1rem;
+        font-size: $cta-desktop-font-size;
+      }
+    }
+
+    &__hero_image {
+      margin: 0.5em 0em 0em 2em;
+      width: 90%;
+      height: auto;
+
+      @include above-mobile() {
+        position: absolute;
+        top: 12%;
+        right: -8%;
+        width: 45%;
+        height: auto;
+      }
+    }
+  }
+
+  &__benefits {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-start;
+    color: $color-title;
+    gap: 5em;
+    margin-bottom: 10em;
+
+    @include above-mobile() {
+      align-items: center;
+      justify-content: center;
+      width: 85%;
+      height: 100vh;
+      gap: 3em;
+      margin-bottom: 2em;
+    }
+
+    &__title {
+      letter-spacing: 0.04em;
+      font-size: 2.6rem;
+      text-align: center;
+
+      @include above-mobile() {
+        text-align: center;
+        font-size: 1.32rem;
+      }
+    }
+
+    &__description {
+      font-size: $mobile-text-size;
+      line-height: 2.4em;
+      font-family: "DMSans-Regular";
+      position: relative;
+
+      @include above-mobile() {
+        font-size: 0.6rem;
+        line-height: 1.8em;
+      }
+
+      &__image {
+        position: absolute;
+        top: -25%;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: auto;
+
+        @include above-mobile() {
+          top: -80%;
+          width: 60%;
+          left: 20%;
+        }
+      }
+    }
+
+    &__additional_benefits {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      justify-content: flex-start;
+      font-family: "DMSans-Regular";
+      gap: 4em;
+
+      @include above-mobile() {
+        margin-left: 1em;
+        gap: 5em;
+        flex-direction: row;
+        width: 80%;
+      }
+
+      &__title {
+        font-size: 2.6rem;
+        margin-bottom: 1em;
+
+        @include above-mobile() {
+          font-size: 1.32rem;
+          margin-bottom: 0.5em;
+        }
+      }
+
+      &__description {
+        font-size: $mobile-text-size;
+        line-height: 1.6em;
+
+        @include above-mobile() {
+          font-size: 0.6rem;
+          line-height: 1.2em;
+        }
+      }
+    }
+  }
+
+  &__work_plan {
+    padding: 5em 2em 4em 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-content: flex-start;
+    color: $color-title;
+    gap: 4.2em;
+    background-color: $color-gray-f7;
+
+    @include above-mobile() {
+      align-items: center;
+      justify-content: center;
+      gap: 3em;
+      padding: 0em;
+    }
+
+    &__title {
+      letter-spacing: 0.04em;
+      font-size: 2.2rem;
+      font-family: "DMSans-Medium";
+      font-weight: 700;
+
+      @include above-mobile() {
+        text-align: center;
+        font-size: 1.32rem;
+        margin-top: 3em;
+        margin-bottom: 1em;
+      }
+    }
+
+    &__join_now {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.4em;
+      padding-bottom: 0.2em;
+
+      @include above-mobile() {
+        padding-bottom: 5.2em;
+        gap: 1em;
+      }
+
+      &__title {
+        letter-spacing: 0.04em;
+        font-size: 2rem;
+        margin-top: 1.6em;
+
+        @include above-mobile() {
+          text-align: center;
+          font-size: 1.32rem;
+          margin-top: 2.5em;
+        }
+      }
+    }
+  }
+
+  &__our_team {
+    position: relative;
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $color-title;
+    gap: 5em;
+    background-color: $color-white;
+
+    @include above-mobile() {
+      align-items: center;
+      justify-content: space-around;
+      gap: 6em;
+      padding: 5em 0em 5em 0em;
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__circle_image {
+        @include above-mobile() {
+          width: 90%;
+          height: auto;
+          margin-bottom: -6%;
+        }
+      }
+
+      &__title {
+        letter-spacing: 0.04em;
+        font-size: 2.2rem;
+        font-family: "DMSans-Medium";
+        font-weight: 700;
+        text-align: center;
+        width: 100%;
+
+        @include above-mobile() {
+          text-align: center;
+          font-size: 1.32rem;
+        }
+      }
+    }
+
+    &__subtitle {
+      font-family: "DMSans-Regular";
+      font-size: 0.8em;
+      color: $color-gray-8a;
+      margin-bottom: 1.25em;
+      text-align: center;
+      letter-spacing: 0.5em;
+
+      @include above-mobile() {
+        font-size: 0.4em;
+      }
+    }
+
+    &__testemonial {
+      margin-top: 8em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @include above-mobile() {
+        margin-top: 0em;
+        height: 100vh;
+      }
+    }
+
+    &__thumb_down {
+      margin-top: 8em;
+
+      @include above-mobile() {
+        margin-top: 4em;
+      }
+    }
+  }
+
+  &__schedule {
+    background-color: $color-dark-purple;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
+    padding: 2em;
+
+    @include above-mobile() {
+      flex-direction: row;
+      padding: 7em;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+
+      @include above-mobile() {
+        gap: 0em;
+      }
+
+      &__title {
+        margin-bottom: 1.4em;
+        font-size: 2.9rem;
+        color: $color-white;
+        font-family: "DMSans-Medium";
+        margin-top: 4em;
+
+        @include above-mobile() {
+          font-size: 1.5rem;
+          margin-top: 0;
+        }
+      }
+
+      &__email {
+        margin-top: 2.2em;
+
+        &__container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1em;
+          margin-top: 0.75em;
+
+          @include above-mobile() {
+            gap: 0.8em;
+            flex-direction: row;
+          }
+        }
+
+        &__input {
+          width: 100%;
+          height: 4em;
+          background: $color-dark-purple;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 2rem;
+          padding: 0.8rem 2rem;
+          font-size: $mobile-text-size;
+          font-family: "DMSans-Regular";
+
+          @include above-mobile() {
+            height: 2em;
+            font-size: $cta-desktop-font-size;
+          }
+        }
+
+        &__subtitle {
+          color: $color-light-blue;
+          font-size: $mobile-text-size;
+
+          @include above-mobile() {
+            font-size: $cta-desktop-font-size;
+          }
+        }
+      }
+
+      &__cta {
+        cursor: pointer;
+        margin: auto;
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-start;
+        background-color: $color-clients-cta;
+        color: $color-white;
+        width: 45%;
+        border-radius: 2rem;
+        filter: drop-shadow(
+            0px 2.767256498336792px 2.2138051986694336px rgba(0, 0, 0, 0.04)
+          )
+          drop-shadow(
+            0px 6.650102138519287px 5.32008171081543px rgba(0, 0, 0, 0.03)
+          )
+          drop-shadow(
+            0px 12.521552085876465px 10.017241477966309px rgba(0, 0, 0, 0.04)
+          )
+          drop-shadow(
+            0px 22.3363094329834px 17.869047164916992px rgba(0, 0, 0, 0.04)
+          )
+          drop-shadow(
+            0px 41.777610778808594px 33.422088623046875px rgba(0, 0, 0, 0.05)
+          )
+          drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.3));
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        font-family: "DMSans-Regular";
+        text-align: center;
+        font-size: $mobile-text-size;
+
+        @include above-mobile() {
+          font-size: $cta-desktop-font-size;
+        }
+      }
+
+      &__label {
+        color: $color-white;
+        font-size: $mobile-text-size;
+        font-family: "DMSans-Regular";
+        font-size: 0.9em;
+        margin-top: 1em;
+
+        @include above-mobile() {
+          font-size: 0.5em;
+        }
+      }
+    }
+
+    &__price {
+      display: flex;
+      flex-direction: column;
+
+      &__title {
+        font-family: "DMSans-Medium";
+        font-size: 1.5em;
+        margin-bottom: 5em;
+        font-weight: 700;
+        color: $color-white;
+
+        @include above-mobile() {
+          font-size: 1.4em;
+          margin-bottom: 2.5em;
+        }
+      }
+
+      &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        max-width: 100%;
+
+        background-color: $color-clients-cta;
+        color: $color-white;
+        padding: 4em;
+
+        @include above-mobile() {
+          padding: 2em;
+          max-width: 20em;
+        }
+
+        &__text {
+          font-size: 1.4em;
+          font-family: "DMSans-Regular";
+          color: $color-white;
+          text-align: center;
+
+          @include above-mobile() {
+            font-size: 0.7em;
+          }
+        }
+
+        &__price_container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 2em;
+
+          @include above-mobile() {
+            gap: 1em;
+          }
+
+          &__price {
+            font-family: "DMSans-Regular";
+            color: $color-white;
+            font-size: 6em;
+            font-weight: 700;
+
+            @include above-mobile() {
+              font-size: 3em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

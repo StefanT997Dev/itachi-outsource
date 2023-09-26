@@ -1,0 +1,47 @@
+@import "./breakpoints";
+@import "./colors";
+
+$h1-mobile-size: 3.8rem;
+$h1-desktop-size: 1.8rem;
+
+$h2-mobile-size: 1.9rem;
+$desktop-text-size: 0.565rem;
+
+$h2-desktop-size: 0.85rem;
+
+$mobile-text-size: 1.4rem;
+$cta-desktop-font-size: 0.45rem;
+
+@mixin backgroundImage() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  img {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+
+    @include above-mobile(){
+      height: 100vh;
+    }
+  }
+}
+
+@mixin cta-button($color) {
+  position: absolute;
+  background-color: $color;
+  color: $color-white;
+  box-shadow: 0rem 1.8rem 6rem -1.2rem rgba(141, 92, 246, 0.3);
+  border-radius: 0.5rem;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: 300;
+  font-family: "GilroyLight";
+
+  &:hover {
+    color: $color-hover;
+  }
+}

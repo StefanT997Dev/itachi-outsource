@@ -1,0 +1,15 @@
+@import "@/scss/breakpoints";
+@import "@/scss/colors";
+
+.works_list {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+
+  @include above-mobile() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5em;
+    width: 85%;
+  }
+}
